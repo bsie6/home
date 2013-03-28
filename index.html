@@ -14,7 +14,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!--[if IE 6]>
     <style type="text/css">
-    div.browser div.wrapper a.chrome {_background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="/img/Chrome.png");}
+    div.browser div.wrapper a.chrome { _background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="/img/Chrome.png");}
 	div.browser div.wrapper a.firefox {_background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="/img/Firefox.png");}
 	div.browser div.wrapper a.safari { _background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="/img/Safari.png");}
 	div.browser div.wrapper a.opera {_background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="/img/Opera.png");}
@@ -24,9 +24,9 @@
     <![endif]-->
 </head>
 <body>
-    <div class="guide" id="guide">
+    <div class="guide">
         <div class="wrapper">
-            <em id="rt">来自于</em>：<a class="referer" title="点击复制" id="referer-box">加载中……</a>
+            来自于：<a class="referer" title="点击复制" id="referer-box">加载中……</a>
         </div>
     </div>
     <div class="header">
@@ -55,17 +55,7 @@
         </div>
     </div>
     <script type="text/javascript">
-    var bsie6={el:function(id){return document.getElementById(id)},get:function(key){var qs=document.location.search.split("+").join(" "),params={},tokens,re=/[?&]?([^=]+)=([^&]*)/g;while(tokens=re.exec(qs)){if(key==decodeURIComponent(tokens[1])){return decodeURIComponent(tokens[2])}}return""},copy:function(content){if(window.clipboardData){window.clipboardData.clearData();window.clipboardData.setData("text",content);alert("复制成功");return}else if(window.netscape){try{netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")}catch(e){alert("您使用的浏览器不支持此复制功能，请使用Ctrl+C或鼠标右键。");return}var clip=Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);if(!clip)return;var trans=Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);if(!trans)return;trans.addDataFlavor('text/unicode');var str=new Object();var len=new Object();var str=Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);var copytext=content;str.data=copytext;trans.setTransferData("text/unicode",str,copytext.length*2);var clipid=Components.interfaces.nsIClipboard;if(!clip)return false;clip.setData(trans,null,clipid.kGlobalClipboard);alert("复制成功")}return alert("您使用的浏览器不支持此复制功能，请使用Ctrl+C或鼠标右键。")}};var hideguide=function(){bsie6.el("guide").innerHTML="<div class='wrapper'></div>"};window.onload=function(){var rt=bsie6.el("rt");var refererbox=bsie6.el("referer-box");var referer=bsie6.get("f");if(!referer){rt.innerHTML="嵌入代码";referer='window.location.href="http://www.bsie6.com/index.html?f=" + encodeURIComponent(window.location.href);';setTimeout("hideguide();",10000)}refererbox.innerHTML=referer;refererbox.onclick=function(e){bsie6.copy(referer)}};
+    var bsie6={el:function(id){return document.getElementById(id)},get:function(key){var qs=document.location.search.split("+").join(" "),params={},tokens,re=/[?&]?([^=]+)=([^&]*)/g;while(tokens=re.exec(qs)){if(key==decodeURIComponent(tokens[1])){return decodeURIComponent(tokens[2])}}return""},copy:function(content){if(window.clipboardData){window.clipboardData.clearData();window.clipboardData.setData("text",content);alert("复制成功");return}else if(window.netscape){try{netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")}catch(e){alert("您使用的浏览器不支持此复制功能，请使用Ctrl+C或鼠标右键。");return}var clip=Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);if(!clip)return;var trans=Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);if(!trans)return;trans.addDataFlavor('text/unicode');var str=new Object();var len=new Object();var str=Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);var copytext=content;str.data=copytext;trans.setTransferData("text/unicode",str,copytext.length*2);var clipid=Components.interfaces.nsIClipboard;if(!clip)return false;clip.setData(trans,null,clipid.kGlobalClipboard);alert("复制成功")}return alert("您使用的浏览器不支持此复制功能，请使用Ctrl+C或鼠标右键。")}};window.onload=function(){var refererbox=bsie6.el("referer-box");var referer=bsie6.get("f");if(!referer)referer="http://www.bsie6.com/";refererbox.innerHTML=referer;refererbox.onclick=function(e){bsie6.copy(referer)}};
     </script>
-	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-39693811-1']);
-	  _gaq.push(['_trackPageview']);
-	  (function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	</script>
 </body>
 </html>
