@@ -1,0 +1,62 @@
+/*
+------------------------------------------------
+http://www.buyisf.com/
+v1.0 | 20130311
+License: none (public domain)
+------------------------------------------------
+*/
+
+/*
+------------------------------------------------
+Body and structure
+------------------------------------------------
+*/
+body { background-color: #1B1B1B; }
+
+/*
+------------------------------------------------
+Common
+------------------------------------------------
+*/
+div.wrapper  { width: 900px; padding: 40px 20px; margin:0 auto; position: relative; display: block; clear: both;text-align: center;}
+
+/*
+------------------------------------------------
+Guide
+------------------------------------------------
+*/
+div.guide div.wrapper {color: #1a7f43; text-align: left;margin-top:50px; padding: 15px 20px;}
+div.guide div.wrapper a.referer {color: #d0252b; cursor:hand;}
+
+/*
+------------------------------------------------
+Header
+------------------------------------------------
+*/
+div.header div.wrapper {color: #1a7f43; text-shadow: 0 1px 0 rgba(255,255,255,.2); }
+div.header div.wrapper h1 {width: 100%; text-align: center; font-size: 2.8em; line-height: 1.8em; margin-bottom: 10px; }
+div.header div.wrapper h2 {width: 100%; text-align: left; font-size: 1.3em; line-height: 1.2em; margin-bottom: 10px; }
+
+/*
+------------------------------------------------
+Browser
+------------------------------------------------
+*/
+div.browser { width: 100%; background: url("../img/background_browser.png"); height: 208px; }
+div.browser div.wrapper a {display: inline-block;margin: 0;padding: 0;width :128px ; padding-top :128px;height:0px;font-size:0px;overflow:hidden; background-position: 0 0;}
+div.browser div.wrapper a.chrome { background: url("../img/Chrome.png") no-repeat;}
+div.browser div.wrapper a.firefox { background: url("../img/Firefox.png") no-repeat;}
+div.browser div.wrapper a.safari { background: url("../img/Safari.png") no-repeat; }
+div.browser div.wrapper a.opera { background: url("../img/Opera.png") no-repeat; }
+div.browser div.wrapper a.ie { background: url("../img/IE.png") no-repeat;}
+div.browser div.wrapper a.xchrome { background: url("../img/360chrome.png") no-repeat;}
+
+/*
+------------------------------------------------
+Footer
+------------------------------------------------
+*/
+div.footer div.wrapper { text-align: center; position: relative; top:0; }
+div.footer div.wrapper ul li { list-style: none; display: inline; }
+div.footer div.wrapper ul li a, div.footer  div.wrapper ul li { color: #d4d3d8; text-shadow: 0 1px 0 rgba(255,255,255,.2); text-decoration: none; font-weight: bold; font-size: 14px; margin-right: 30px;}
+div.footer div.wrapper a:hover { color: #a0293d; }
