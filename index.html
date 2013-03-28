@@ -3,9 +3,6 @@
 <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <title>为了安全性、兼容性和人性化，是时候选择一个更优质的浏览器</title>
-    <meta content="布衣私服" property="og:site_name" />
-    <meta content="/bsie6.html" property="og:url" />
-    <meta content="/img/ie6/better_browser.jpg" property="og:image" />
     <meta content="为了安全性、兼容性和人性化，是时候选择一个更优质的浏览器" property="og:title" />
     <meta content="每一天在世界各地有数以百万计的网页被可怕的毁容，这场悲剧的原因是Internet Explorer 6。我想你也愿意提供帮助，如果你或你认识的人使用Internet Explorer，请保存网页，然后选择一个更优质的浏览器。" property="og:description" />
     <meta content="一个简单的加载页面就是一个简单的行动呼吁。请选择一个更好的浏览器，同时把Internet Explorer 6放入回收站中。" name="Description" />
@@ -13,20 +10,20 @@
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!--[if IE 6]>
-    <style type="text/css">
-    div.browser div.wrapper a.chrome { _background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="/img/Chrome.png");}
-	div.browser div.wrapper a.firefox {_background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="/img/Firefox.png");}
-	div.browser div.wrapper a.safari { _background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="/img/Safari.png");}
-	div.browser div.wrapper a.opera {_background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="/img/Opera.png");}
-	div.browser div.wrapper a.ie {_background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="/img/IE.png");}
-	div.browser div.wrapper  a.xchrome {_background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="/img/360chrome.png");}
-    </style>
-    <![endif]-->
+<style type="text/css">
+div.browser div.wrapper a.chrome {_background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="/img/Chrome.png");}
+div.browser div.wrapper a.firefox {_background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="/img/Firefox.png");}
+div.browser div.wrapper a.safari { _background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="/img/Safari.png");}
+div.browser div.wrapper a.opera {_background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="/img/Opera.png");}
+div.browser div.wrapper a.ie {_background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="/img/IE.png");}
+div.browser div.wrapper a.xchrome {_background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="/img/360chrome.png");}
+</style>
+<![endif]-->
 </head>
 <body>
-    <div class="guide">
+    <div class="guide" id="guide">
         <div class="wrapper">
-            来自于：<a class="referer" title="点击复制" id="referer-box">加载中……</a>
+            <em id="rt">来自于</em>：<a class="referer" title="点击复制" id="referer-box">加载中……</a>
         </div>
     </div>
     <div class="header">
@@ -48,14 +45,27 @@
     <div class="footer">
         <div class="wrapper">
             <ul>
-                <li><a href="/">首页</a></li>
-                <li><a target="_blank" href="http://deathtoie6.com/">原版地址</a></li>
-                <li><a target="_blank" href="https://github.com/xiefg/bsie6/">GitHub</a></li>
+                <li><a target="_blank" href="http://www.microsoft.com/zh-cn/default.aspx">微软中国</a></li>
+                <li><a target="_blank" href="http://www.360.cn/">360安全中心</a></li>
+                <li><a target="_blank" href="http://www.google.com/">谷歌</a></li>
+                <li><a target="_blank" href="http://firefox.com.cn/">谋智网络</a></li>
+                <li><a target="_blank" href="http://www.apple.com.cn/">苹果中国</a></li>
+                <li><a target="_blank" href="https://github.com/">GitHub</a></li>
             </ul>
         </div>
     </div>
     <script type="text/javascript">
-    var bsie6={el:function(id){return document.getElementById(id)},get:function(key){var qs=document.location.search.split("+").join(" "),params={},tokens,re=/[?&]?([^=]+)=([^&]*)/g;while(tokens=re.exec(qs)){if(key==decodeURIComponent(tokens[1])){return decodeURIComponent(tokens[2])}}return""},copy:function(content){if(window.clipboardData){window.clipboardData.clearData();window.clipboardData.setData("text",content);alert("复制成功");return}else if(window.netscape){try{netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")}catch(e){alert("您使用的浏览器不支持此复制功能，请使用Ctrl+C或鼠标右键。");return}var clip=Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);if(!clip)return;var trans=Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);if(!trans)return;trans.addDataFlavor('text/unicode');var str=new Object();var len=new Object();var str=Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);var copytext=content;str.data=copytext;trans.setTransferData("text/unicode",str,copytext.length*2);var clipid=Components.interfaces.nsIClipboard;if(!clip)return false;clip.setData(trans,null,clipid.kGlobalClipboard);alert("复制成功")}return alert("您使用的浏览器不支持此复制功能，请使用Ctrl+C或鼠标右键。")}};window.onload=function(){var refererbox=bsie6.el("referer-box");var referer=bsie6.get("f");if(!referer)referer="http://www.bsie6.com/";refererbox.innerHTML=referer;refererbox.onclick=function(e){bsie6.copy(referer)}};
+    var bsie6={el:function(id){return document.getElementById(id)},get:function(key){var qs=document.location.search.split("+").join(" "),params={},tokens,re=/[?&]?([^=]+)=([^&]*)/g;while(tokens=re.exec(qs)){if(key==decodeURIComponent(tokens[1])){return decodeURIComponent(tokens[2])}}return""},copy:function(content){if(window.clipboardData){window.clipboardData.clearData();window.clipboardData.setData("text",content);alert("复制成功");return}else if(window.netscape){try{netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")}catch(e){alert("您使用的浏览器不支持此复制功能，请使用Ctrl+C或鼠标右键。");return}var clip=Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);if(!clip)return;var trans=Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);if(!trans)return;trans.addDataFlavor('text/unicode');var str=new Object();var len=new Object();var str=Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);var copytext=content;str.data=copytext;trans.setTransferData("text/unicode",str,copytext.length*2);var clipid=Components.interfaces.nsIClipboard;if(!clip)return false;clip.setData(trans,null,clipid.kGlobalClipboard);alert("复制成功")}return alert("您使用的浏览器不支持此复制功能，请使用Ctrl+C或鼠标右键。")}};var hideguide=function(){bsie6.el("guide").innerHTML="<div class='wrapper'></div>"};window.onload=function(){var rt=bsie6.el("rt");var refererbox=bsie6.el("referer-box");var referer=bsie6.get("f");if(!referer){rt.innerHTML="嵌入代码";referer='window.location.href="http://www.bsie6.com/index.html?f=" + encodeURIComponent(window.location.href);';setTimeout("hideguide();",10000)}refererbox.innerHTML=referer;refererbox.onclick=function(e){bsie6.copy(referer)}};
     </script>
+	<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-39693811-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	</script>
 </body>
 </html>
